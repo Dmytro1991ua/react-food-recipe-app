@@ -1,12 +1,13 @@
 import "./App.css";
-import { Container, Wrapper } from "./components/styled-componets/styles";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import { Wrapper } from "./components/styled-componets/general-styles";
 
 function App() {
   return (
     <Wrapper>
-      <Container>
-        <h1>Hello</h1>
-      </Container>
+      <Header />
+      <Home/>
     </Wrapper>
   );
 }

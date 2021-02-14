@@ -38,9 +38,8 @@ body {
 
 body {
   font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 
-body.lock {
-  overflow: hidden;
-}
+
