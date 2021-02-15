@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./styled-componets/general-styles";
 import {
   HeaderSection,
@@ -14,16 +15,18 @@ const Header = () => {
     <HeaderSection>
       <Container>
         <HeaderBody>
-          <Logo
-            src={require("../images/logo.png").default}
-            alt="weather app img"
-          ></Logo>
+          <Link to="/">
+            <Logo
+              src={require("../images/logo.png").default}
+              alt="weather app img"
+            ></Logo>
+          </Link>
           <List>
             <ListItem>
-              <ListLink href="#">Home</ListLink>
+              <ListLink to="/">Home</ListLink>
             </ListItem>
             <ListItem>
-              <ListLink href="#">Recipes</ListLink>
+              <ListLink to="/recipes">Recipes</ListLink>
             </ListItem>
           </List>
         </HeaderBody>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "./general-styles";
 
@@ -15,6 +16,7 @@ export const HeaderBody = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 export const Logo = styled.img`
   width: 5rem;
   height: 5rem;
@@ -36,7 +38,7 @@ export const ListItem = styled.li`
     margin-right: 1rem;
   }
 `;
-export const ListLink = styled.a`
+export const ListLink = styled(Link)`
   font-size: clamp(1.2rem, 1.8rem, 4rem);
   color: ${colors.white};
   transition: all 0.3s ease-in-out;
