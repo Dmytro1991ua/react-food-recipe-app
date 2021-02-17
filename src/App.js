@@ -4,6 +4,9 @@ import Home from "./components/Home";
 import { Wrapper } from "./components/styled-componets/general-styles";
 import { HashRouter as Router, Route } from "react-router-dom";
 import Recipes from "./components/Recipes";
+//import { useEffect, useState } from "react";
+//import axios from "axios";
+//import { RecipesListProvider } from "./RecipesContext";
 
 function App() {
   return (
