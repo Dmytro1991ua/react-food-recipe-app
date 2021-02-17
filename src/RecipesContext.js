@@ -20,7 +20,6 @@ export const RecipesListProvider = (props) => {
       }
     };
     getRecipe();
-    console.log("run")
   }, [query]);
 
   return (
