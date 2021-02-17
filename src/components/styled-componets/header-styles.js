@@ -8,6 +8,7 @@ export const HeaderSection = styled.header`
   padding: 0.3rem 0;
   position: fixed;
   width: 100%;
+  z-index: 3;
   border-bottom: 4px solid ${colors.mantis};
 `;
 

@@ -12,6 +12,10 @@ export const Container = styled.div`
   max-width: 128rem;
   margin: 0 auto;
   padding: 0 1.6rem;
+
+  @media (min-width: 90em) {
+    max-width: 135rem;
+  }
 `;
 
 export const colors = {

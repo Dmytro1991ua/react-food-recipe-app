@@ -9,14 +9,17 @@ import { RecipesContext } from "../RecipesContext";
 
 const Form = () => {
   // "state" of user's recipe input
-  const { recipesInput } = useContext(RecipesContext);
+  const { recipesInput, recipeQuery } = useContext(RecipesContext);
   const [recipeInput, setRecipeInput] = recipesInput;
+
+  const [query, setQuery] = recipeQuery; // recipe API query 'state'
 
   const handleOnChange = (event) => {
     setRecipeInput(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    setQuery(recipeInput);
     setRecipeInput("");
   };
 

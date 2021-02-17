@@ -7,7 +7,7 @@ export const SearchForm = styled.form`
   align-items: center;
   justify-content: center;
   max-width: 50rem;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 `;
 
 export const SearchInput = styled.input`

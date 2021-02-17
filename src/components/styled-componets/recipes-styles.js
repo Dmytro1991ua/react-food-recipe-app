@@ -24,3 +24,15 @@ export const Title = styled.h1`
     margin-top: 15rem;
   }
 `;
+
+export const RecipeCardBody = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const Message = styled.p`
+  font-size: 2rem;
+  font-family: "Ranchers", cursive;
+  text-align: center;
+`;
