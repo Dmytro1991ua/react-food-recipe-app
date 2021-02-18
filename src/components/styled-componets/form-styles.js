@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./general-styles";
+import { colors, fadeInDown } from "./general-styles";
 import { FaSearch } from "react-icons/fa";
 
 export const SearchForm = styled.form`
@@ -8,6 +8,7 @@ export const SearchForm = styled.form`
   justify-content: center;
   max-width: 50rem;
   margin: 0 auto 3rem;
+  animation: ${fadeInDown} 0.4s ease-in-out;
 `;
 
 export const SearchInput = styled.input`

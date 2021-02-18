@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./general-styles";
+import { colors, fadeInDown } from "./general-styles";
 
 export const RecipesSection = styled.section`
   background-color: ${colors.lighterBlue};
@@ -14,6 +14,7 @@ export const Title = styled.h1`
   margin-top: 10rem;
   text-align: center;
   margin-bottom: 2rem;
+  animation: ${fadeInDown} 0.4s ease-in-out;
 
   @media (min-width: 48em) {
     font-size: 4rem;
@@ -29,10 +30,12 @@ export const RecipeCardBody = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: self-start;
 `;
 
 export const Message = styled.p`
   font-size: 2rem;
   font-family: "Ranchers", cursive;
   text-align: center;
+  animation: ${fadeInDown} 0.4s ease-in-out;
 `;

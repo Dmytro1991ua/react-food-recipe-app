@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./general-styles";
+import { colors, flipInX } from "./general-styles";
 import img from "../../images/bg.jpg";
 import { Link } from "react-router-dom";
 
@@ -23,6 +23,7 @@ export const HomeSectionBody = styled.div`
   align-items: center;
   min-height: 100vh;
   color: ${colors.white};
+  animation: ${flipInX} 0.4s ease-in-out;
 `;
 
 export const Title = styled.h1`

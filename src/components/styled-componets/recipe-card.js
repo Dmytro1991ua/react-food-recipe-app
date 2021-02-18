@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./general-styles";
+import { colors, fadeInDown } from "./general-styles";
 
 export const RecipeCard = styled.figure`
   flex: 0 1 100%;
@@ -13,16 +13,13 @@ export const RecipeCard = styled.figure`
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  animation: ${fadeInDown} 0.4s ease-in-out;
   cursor: pointer;
   filter: drop-shadow(7px 8px 4px ${colors.darkBlue});
 
   @media (min-width: 39rem) {
     margin-right: 2rem;
-  }
-
-  &:hover {
-     transform: rotate(-3deg);
   }
 `;
 

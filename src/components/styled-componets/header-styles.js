@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { colors } from "./general-styles";
+import { colors, fadeInDown } from "./general-styles";
 
 // Header section
 export const HeaderSection = styled.header`
@@ -10,6 +10,7 @@ export const HeaderSection = styled.header`
   width: 100%;
   z-index: 3;
   border-bottom: 4px solid ${colors.mantis};
+  animation: ${fadeInDown} 0.4s ease-in-out;
 `;
 
 export const HeaderBody = styled.div`

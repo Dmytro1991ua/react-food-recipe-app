@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./styled-componets/general-styles";
+import { Container} from "./styled-componets/general-styles";
 import {
   HomeBtn,
   HomeSection,
