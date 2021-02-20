@@ -66,6 +66,8 @@ export const RecipeURL = styled.a`
 export const RecipeCardBtn = styled.a`
   display: inline-block;
   font-size: 1.7rem;
+  font-family: "Ranchers", cursive;
+  letter-spacing: 0.2rem;
   padding: 1.2rem;
   background-color: ${colors.mantis};
   width: 90%;

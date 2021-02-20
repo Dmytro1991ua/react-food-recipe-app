@@ -9,6 +9,7 @@ export const SearchForm = styled.form`
   max-width: 50rem;
   margin: 0 auto 3rem;
   animation: ${fadeInDown} 0.4s ease-in-out;
+  position: relative;
 `;
 
 export const SearchInput = styled.input`

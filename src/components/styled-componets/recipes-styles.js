@@ -39,3 +39,10 @@ export const Message = styled.p`
   text-align: center;
   animation: ${fadeInDown} 0.4s ease-in-out;
 `;
+
+export const Spinner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+`;
