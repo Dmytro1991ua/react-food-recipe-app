@@ -75,9 +75,10 @@ export const RecipeCardBtn = styled.a`
   border-radius: 1.2rem;
   text-align: center;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
+    opacity: .86;
     background-color: ${colors.mantisDarker};
   }
 `;

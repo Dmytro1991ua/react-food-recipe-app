@@ -9,8 +9,8 @@ import {
 const RecipeIngredients = ({ ingredients }) => {
   return ingredients.map((ingredient) => {
     return (
-      <Ingredients>
-        <ul key={uuidv4()}>
+      <Ingredients key={uuidv4()}>
+        <ul>
           <Text>{ingredient.text}</Text>
           <Weight>Weight - {ingredient.weight.toFixed(2)}</Weight>
         </ul>
