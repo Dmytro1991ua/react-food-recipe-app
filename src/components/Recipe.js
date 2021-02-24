@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import RecipeIngredients from "./RecipeIngredients";
-import { colors } from "./styled-componets/general-styles";
 import {
   RecipeCard,
   RecipeCardBtn,

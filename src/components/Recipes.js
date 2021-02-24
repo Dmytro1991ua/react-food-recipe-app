@@ -12,20 +12,18 @@ import {
 } from "./styled-componets/recipes-styles";
 import { v4 as uuidv4 } from "uuid";
 import RotateLoader from "react-spinners/RotateLoader";
+import Paginations from "./Pagination";
+import FindRecipeMessage from "./FindRecipeMessage";
 
 const Recipes = () => {
   // 'state' of recived recipe data from a server
   const { recipesState } = useContext(RecipesContext);
-  const [recipes, setRecipes] = recipesState;
+  const [currentRecipeCard, setRecipes] = recipesState;
 
   // desctrucrure "state" of loading data from a server
   const { recipeLoading } = useContext(RecipesContext);
   const [loading, setLoading] = recipeLoading;
 
-   //desctucture "state" which shows or hide error message
-  // const { error } = useContext(RecipesContext);
-  // const [errorMessage, setErrorMessage] = error;
-  
   return (
     <RecipesSection>
       <Container>
@@ -42,13 +40,16 @@ const Recipes = () => {
           </Spinner>
         ) : (
           <RecipeCardBody>
-            {recipes.length > 0 ? (
-              recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)
+            {currentRecipeCard.length > 0 ? (
+              currentRecipeCard.map((recipe) => (
+                <Recipe key={uuidv4()} recipe={recipe} />
+              ))
             ) : (
-              <Message>Find Your Recipe...</Message>
+              <FindRecipeMessage />
             )}
           </RecipeCardBody>
         )}
+        {!loading && <Paginations />} {/* show Paginations component when a data is loaded and card are rendered*/}
       </Container>
     </RecipesSection>
   );

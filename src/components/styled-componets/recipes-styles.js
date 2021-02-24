@@ -31,13 +31,11 @@ export const RecipeCardBody = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: self-start;
-`;
+  margin-bottom: 1rem;
 
-export const Message = styled.p`
-  font-size: 2rem;
-  font-family: "Ranchers", cursive;
-  text-align: center;
-  animation: ${fadeInDown} 0.4s ease-in-out;
+  @media (min-width: 62em) {
+    justify-content: space-between;
+  }
 `;
 
 export const Spinner = styled.div`

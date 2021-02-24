@@ -9,12 +9,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 128rem;
+  max-width: 117rem;
   margin: 0 auto;
   padding: 0 1.6rem;
 
   @media (min-width: 90em) {
-    max-width: 135rem;
+    max-width: 120rem;
   }
 `;
 

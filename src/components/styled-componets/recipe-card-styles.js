@@ -21,6 +21,10 @@ export const RecipeCard = styled.figure`
   @media (min-width: 39rem) {
     margin-right: 2rem;
   }
+
+  @media (min-width: 75rem) {
+    max-width: 34rem;
+  }
 `;
 
 export const RecipeTitle = styled.h2`

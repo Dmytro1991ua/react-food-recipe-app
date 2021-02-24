@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { colors, flipInX } from "./general-styles";
 import img from "../../images/bg.jpg";
+import imgSmall from "../../images/bg-small.jpg";
 import { Link } from "react-router-dom";
 
 export const HomeSection = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${img});
+    url(${imgSmall});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 38%;
@@ -13,6 +14,14 @@ export const HomeSection = styled.section`
 
   @media (min-width: 48em) {
     background-position: center;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.9em),
+    (min-width: 125em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.9em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${img});
   }
 `;
 

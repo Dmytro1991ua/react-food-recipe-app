@@ -14,7 +14,7 @@ const Recipes = lazy(() => import("./components/Recipes"));
 function App() {
   // destructured "state" to show or hide a preloader when a react app is loading/loaded
   const { preloaderState } = useContext(RecipesContext);
-  const [preloader, setPreloader] = preloaderState;
+  const [preloader, setPreloader] = preloaderState; 
 
   return (
     <Router>

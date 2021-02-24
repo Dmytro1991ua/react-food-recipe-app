@@ -4,13 +4,18 @@ import axios from "axios";
 export const RecipesContext = createContext();
 
 export const RecipesListProvider = (props) => {
+  // recipe related "states"
   const [recipes, setRecipes] = useState([]);
   const [recipeInput, setRecipeInput] = useState("");
   const [query, setQuery] = useState("");
+  //loading "state"
   const [loading, setLoading] = useState(false);
+  // preloader "state"
   const [preloader, setPreloader] = useState(false);
-  //const [errorMessage, setErrorMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
+  //pagination related "states"
+  const [currentPage, setCurrentPage] = useState(1); // first page by default
+  const [recipeCardsPerPage] = useState(3); // by default 6 recipe cards per page
+  const recipeCardsTotalPages = Math.ceil(recipes.length / recipeCardsPerPage);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -20,11 +25,9 @@ export const RecipesListProvider = (props) => {
         const response = await axios.get(apiUrl);
         setRecipes(response.data.hits);
         setLoading(false);
-        setErrorMessage(null);
         console.log(response.data);
       } catch (error) {
         setLoading(false);
-        setErrorMessage("No food with such name")
         console.log(error);
       }
     };
@@ -39,15 +42,30 @@ export const RecipesListProvider = (props) => {
     }, 1000);
   }, []);
 
+  //Get Current Post
+  const indexOfLastRecipeCard = currentPage * recipeCardsPerPage; // 1 * 6  = 6
+  const indexOfFirstRecipeCard = indexOfLastRecipeCard - recipeCardsPerPage; // 6 - 6 = 0
+  const currentRecipeCard = recipes.slice(
+    indexOfFirstRecipeCard,
+    indexOfLastRecipeCard
+  ); // return 6 recipe cards in one page
+
+  const paginate = (pageNumber) => {
+    // change a CurrentPage "state" by passing number of a page
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <RecipesContext.Provider
       value={{
-        recipesState: [recipes, setRecipes],
+        recipesState: [currentRecipeCard, setRecipes],
         recipesInput: [recipeInput, setRecipeInput],
         recipeQuery: [query, setQuery],
         preloaderState: [preloader, setPreloader],
         recipeLoading: [loading, setLoading],
-        error: [errorMessage, setErrorMessage],
+        pagination: [paginate],
+        pageCurrent: [currentPage, setCurrentPage],
+        cardsLength: [recipeCardsTotalPages],
       }}
     >
       {props.children}
