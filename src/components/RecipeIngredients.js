@@ -7,6 +7,7 @@ import {
 } from "./styled-componets/recipeIngredients-styles";
 
 const RecipeIngredients = ({ ingredients }) => {
+
   return ingredients.map((ingredient) => {
     return (
       <Ingredients key={uuidv4()}>

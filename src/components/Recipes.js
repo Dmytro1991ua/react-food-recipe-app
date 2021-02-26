@@ -45,11 +45,12 @@ const Recipes = () => {
                 <Recipe key={uuidv4()} recipe={recipe} />
               ))
             ) : (
-              <FindRecipeMessage />
+              <FindRecipeMessage title="Find Your Recipe..." />
             )}
           </RecipeCardBody>
         )}
-        {!loading && <Paginations />} {/* show Paginations component when a data is loaded and card are rendered*/}
+        {!loading && <Paginations />}{" "}
+        {/* show Paginations component when a data is loaded and card are rendered*/}
       </Container>
     </RecipesSection>
   );

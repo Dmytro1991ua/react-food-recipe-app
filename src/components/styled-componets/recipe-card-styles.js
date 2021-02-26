@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors, fadeInDown } from "./general-styles";
+import { FaPlusCircle } from "react-icons/fa";
 
 export const RecipeCard = styled.figure`
   flex: 0 1 100%;
@@ -55,10 +56,16 @@ export const RecipeImg = styled.img`
   margin-bottom: 2rem;
 `;
 
+export const RecipeFeatures = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+`;
+
 export const RecipeURL = styled.a`
   display: inline-block;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
   cursor: pointer;
   color: ${colors.mantisDarker};
   transition: all 0.3s ease-in-out;
@@ -82,7 +89,22 @@ export const RecipeCardBtn = styled.a`
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
-    opacity: .86;
+    opacity: 0.86;
     background-color: ${colors.mantisDarker};
+  }
+`;
+
+export const IconContainer = styled.a`
+  border: none;
+  background-color: ${colors.mantis};
+  padding: 0.7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;

@@ -16,6 +16,8 @@ export const RecipesListProvider = (props) => {
   const [currentPage, setCurrentPage] = useState(1); // first page by default
   const [recipeCardsPerPage] = useState(3); // by default 6 recipe cards per page
   const recipeCardsTotalPages = Math.ceil(recipes.length / recipeCardsPerPage);
+  // favorite recipe related "state"
+  const [favoriteRecipe, setFavoriteRecipe] = useState([]);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -66,6 +68,7 @@ export const RecipesListProvider = (props) => {
         pagination: [paginate],
         pageCurrent: [currentPage, setCurrentPage],
         cardsLength: [recipeCardsTotalPages],
+        favorites: [favoriteRecipe, setFavoriteRecipe],
       }}
     >
       {props.children}

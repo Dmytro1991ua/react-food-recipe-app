@@ -4,10 +4,10 @@ import {
   MessageBox,
 } from "./styled-componets/find-recipe-message-styles";
 
-const FindRecipeMessage = () => {
+const FindRecipeMessage = ({title}) => {
   return (
     <MessageBox>
-      <Message>Find Your Recipe...</Message>
+      <Message>{title}</Message>
     </MessageBox>
   );
 };

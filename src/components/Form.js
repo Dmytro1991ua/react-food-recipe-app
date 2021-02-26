@@ -35,7 +35,7 @@ const Form = () => {
         placeholder="Your Recipe..."
       />
       <IconBox>
-        <FaSearch color="#fffff" />
+        <FaSearch />
       </IconBox>
     </SearchForm>
   );

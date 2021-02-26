@@ -36,7 +36,3 @@ export const IconBox = styled.button`
   border-bottom-right-radius: 1.2rem;
 `;
 
-export const SearchIcon = styled(FaSearch)`
-  color: red;
-  background-color: red;
-`;

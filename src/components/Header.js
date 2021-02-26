@@ -28,6 +28,9 @@ const Header = () => {
             <ListItem>
               <ListLink to="/recipes">Recipes</ListLink>
             </ListItem>
+            <ListItem>
+              <ListLink to="/favorites">Favorites</ListLink>
+            </ListItem>
           </List>
         </HeaderBody>
       </Container>
