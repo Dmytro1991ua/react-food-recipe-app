@@ -24,18 +24,18 @@ const Recipe = ({ recipe }) => {
   const [recipeDetails, setRecipeDetails] = useState(false);
   const [btnText, setBtnText] = useState(false);
   const [btnColor, setBtnColor] = useState(false);
-  
+
+  // handle ingredients emergence, color and text of btn while it's clicking
   const handleClick = () => {
     setRecipeDetails(!recipeDetails);
     setBtnText(!btnText);
     setBtnColor(!btnColor);
-
   };
 
-  const handleFavoriteClick = (recipe) => {
+  // add favorite food recipe to a favorite component on click to a btn
+  const handleAddFavoriteClick = (recipe) => {
     const newFavoriteList = [...favoriteRecipe, recipe];
     setFavoriteRecipe(newFavoriteList);
-    console.log("click"); 
   };
 
   return (
@@ -47,7 +47,11 @@ const Recipe = ({ recipe }) => {
           URL
         </RecipeURL>
         <IconContainer>
-          <FaHeart onClick={() => handleFavoriteClick(recipe)} color="#ff6347" fontSize="2.3rem" />
+          <FaHeart
+            onClick={() => handleAddFavoriteClick(recipe)}
+            color="#ff6347"
+            fontSize="2.3rem"
+          />
         </IconContainer>
       </RecipeFeatures>
       <RecipeCardBtn

@@ -27,7 +27,6 @@ export const RecipesListProvider = (props) => {
         const response = await axios.get(apiUrl);
         setRecipes(response.data.hits);
         setLoading(false);
-        console.log(response.data);
       } catch (error) {
         setLoading(false);
         console.log(error);
