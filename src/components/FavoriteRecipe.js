@@ -16,8 +16,9 @@ const FavoriteRecipe = ({ recipe }) => {
   const { recipe: recipeItem } = recipe;
   const { label, image, url, ingredients } = recipeItem;
 
-  const { favorites } = useContext(RecipesContext);
+  const { favorites, localStorage } = useContext(RecipesContext);
   const [favoriteRecipe, setFavoriteRecipe] = favorites;
+  const [saveToLocalStorage] = localStorage;
 
   //"state" of showing or hiding recipe ingredients on click
   const [recipeDetails, setRecipeDetails] = useState(false);
@@ -31,12 +32,13 @@ const FavoriteRecipe = ({ recipe }) => {
     setBtnText(!btnText);
   };
 
-  // delete favorite (choseen) food recipe from FavoriteRecipe component on click to an icon
+  // delete favorite (chosen) food recipe from FavoriteRecipe component on click on icon(btn)
   const handleRemoveFavoriteRecipe = (recipe) => {
     const newFavoriteRecipe = favoriteRecipe.filter(
       (favorite) => favorite !== recipe
     );
     setFavoriteRecipe(newFavoriteRecipe);
+    saveToLocalStorage(newFavoriteRecipe); // delete a particular favorite food recipe from localStorage
   };
 
   return (

@@ -11,7 +11,7 @@ import { Container } from "./styled-componets/general-styles";
 import FindRecipeMessage from "./FindRecipeMessage";
 
 const FavoriteRecipes = () => {
-  const { favorites, recipesState } = useContext(RecipesContext);
+  const { favorites} = useContext(RecipesContext);
   const [favoriteRecipe, setFavoriteRecipe] = favorites;
 
   return (
@@ -24,7 +24,7 @@ const FavoriteRecipes = () => {
               <FavoriteRecipe key={uuidv4()} recipe={recipe} />
             ))
           ) : (
-            <FindRecipeMessage title="Add Your Favorite Food Recipe"/>
+            <FindRecipeMessage title="Add Your Favorite Food Recipe" />
           )}
         </FavoriteSectionBody>
       </Container>

@@ -10,7 +10,7 @@ export const FavoritesSectionTitle = styled(Title)``;
 
 export const FavoriteSectionBody = styled(RecipeCardBody)`
    @media (min-width: 62em) {
-      justify-content: flex-start;
+      justify-content: center;
    }
 `;
 

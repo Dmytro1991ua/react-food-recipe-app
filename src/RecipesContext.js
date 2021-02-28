@@ -56,6 +56,22 @@ export const RecipesListProvider = (props) => {
     setCurrentPage(pageNumber);
   };
 
+  // set data (objects) from a favoriteRecipe array to a localStorage
+  const saveToLocalStorage = (recipeData) => {
+    localStorage.setItem("favorite-recipe-data", JSON.stringify(recipeData));
+  };
+
+  //get(retrieve) favorite recipe data from a localStorage and render it when a react app is loaded
+  useEffect(() => {
+    const favoriteRecipeData = JSON.parse(
+      localStorage.getItem("favorite-recipe-data")
+    );
+
+    if (!favoriteRecipeData) return;
+
+    setFavoriteRecipe(favoriteRecipeData);
+  }, []);
+
   return (
     <RecipesContext.Provider
       value={{
@@ -68,6 +84,7 @@ export const RecipesListProvider = (props) => {
         pageCurrent: [currentPage, setCurrentPage],
         cardsLength: [recipeCardsTotalPages],
         favorites: [favoriteRecipe, setFavoriteRecipe],
+        localStorage: [saveToLocalStorage],
       }}
     >
       {props.children}

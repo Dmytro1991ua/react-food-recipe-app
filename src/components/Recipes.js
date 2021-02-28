@@ -4,7 +4,6 @@ import Form from "./Form";
 import Recipe from "./Recipe";
 import { Container } from "./styled-componets/general-styles";
 import {
-  Message,
   RecipeCardBody,
   RecipesSection,
   Spinner,

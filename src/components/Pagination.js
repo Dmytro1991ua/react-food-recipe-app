@@ -31,6 +31,7 @@ const Paginations = () => {
         {/* Show Prev and Next btns when there is any rendered recipe card */}
         {currentRecipeCard.length > 0 ? (
           <PaginationBtn
+            className={currentBtn === 1 ? "disabled" : ""}
             onClick={() => {
               setCurentBtn((prev) => (prev === 1 ? prev : prev - 1));
               setCurrentPage(currentBtn);
@@ -44,7 +45,7 @@ const Paginations = () => {
         {pageNumbers.map((number) => (
           <PaginationItem
             key={number}
-            className={currentBtn === number && "active"}
+            className={currentBtn === number ? "active": ""}
             onClick={() => {
               paginate(number);
               setCurentBtn(number);
@@ -55,6 +56,9 @@ const Paginations = () => {
         ))}
         {currentRecipeCard.length > 0 ? (
           <PaginationBtn
+            className={
+              currentBtn === pageNumbers.length ? "disabled" : ""
+            }
             onClick={() => {
               setCurentBtn((prev) =>
                 prev === pageNumbers.length ? prev : prev + 1

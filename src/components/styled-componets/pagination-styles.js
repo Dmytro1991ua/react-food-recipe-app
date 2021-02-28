@@ -25,7 +25,11 @@ export const PaginationItem = styled.li`
     background-color: ${colors.mantisDarker};
   }
 
-  &:hover {
+  &.disabled {
+    opacity: 0.2;
+  }
+
+  &:hover:not(.active) {
     background-color: ${colors.lighterBlue};
   }
 `;
@@ -44,4 +48,3 @@ export const PaginationLink = styled.a`
 export const PaginationBtn = styled(PaginationItem)`
   color: ${colors.white};
 `;
-

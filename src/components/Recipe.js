@@ -17,8 +17,9 @@ const Recipe = ({ recipe }) => {
   const { recipe: recipeItem } = recipe;
   const { label, image, url, ingredients } = recipeItem;
 
-  const { favorites } = useContext(RecipesContext);
+  const { favorites, localStorage } = useContext(RecipesContext);
   const [favoriteRecipe, setFavoriteRecipe] = favorites;
+  const [saveToLocalStorage] = localStorage;
 
   //"state" of showing or hiding recipe ingredients on click
   const [recipeDetails, setRecipeDetails] = useState(false);
@@ -36,6 +37,7 @@ const Recipe = ({ recipe }) => {
   const handleAddFavoriteClick = (recipe) => {
     const newFavoriteList = [...favoriteRecipe, recipe];
     setFavoriteRecipe(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
   };
 
   return (
