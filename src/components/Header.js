@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BurgerIcon from "./BurgerIcon";
+import Navigation from "./Navigation";
 import { Container } from "./styled-componets/general-styles";
 import {
   HeaderSection,
   HeaderBody,
   Logo,
-  List,
-  ListItem,
-  ListLink,
 } from "./styled-componets/header-styles";
 
 const Header = () => {
@@ -18,20 +17,11 @@ const Header = () => {
           <Link to="/">
             <Logo
               src={require("../images/logo.png").default}
-              alt="weather app img"
+              alt="recipe app img"
             ></Logo>
           </Link>
-          <List>
-            <ListItem>
-              <ListLink to="/">Home</ListLink>
-            </ListItem>
-            <ListItem>
-              <ListLink to="/recipes">Recipes</ListLink>
-            </ListItem>
-            <ListItem>
-              <ListLink to="/favorites">Favorites</ListLink>
-            </ListItem>
-          </List>
+          <BurgerIcon />
+          <Navigation />
         </HeaderBody>
       </Container>
     </HeaderSection>

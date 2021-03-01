@@ -6,11 +6,11 @@ import Preloader from "./components/Preloader";
 import { RecipesContext } from "./RecipesContext";
 import { lazy, Suspense, useContext } from "react";
 import ComponentLoader from "./components/ComponentLoader";
-import FavoriteRecipes from "./components/FavoriteRecipes";
 
 // component's lazy loading while using React Routing
 const Home = lazy(() => import("./components/Home"));
 const Recipes = lazy(() => import("./components/Recipes"));
+const FavoriteRecipes = lazy(() => import("./components/FavoriteRecipes"));
 
 function App() {
   // destructured "state" to show or hide a preloader when a react app is loading/loaded

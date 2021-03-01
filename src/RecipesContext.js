@@ -18,6 +18,8 @@ export const RecipesListProvider = (props) => {
   const recipeCardsTotalPages = Math.ceil(recipes.length / recipeCardsPerPage);
   // favorite recipe related "state"
   const [favoriteRecipe, setFavoriteRecipe] = useState([]);
+  //"state" to open and close burger menu  in a mobile screens on click
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -85,6 +87,7 @@ export const RecipesListProvider = (props) => {
         cardsLength: [recipeCardsTotalPages],
         favorites: [favoriteRecipe, setFavoriteRecipe],
         localStorage: [saveToLocalStorage],
+        burgerMenu: [open, setOpen],
       }}
     >
       {props.children}
