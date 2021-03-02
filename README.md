@@ -2,10 +2,15 @@
 
 Food Recipe is a React-based application that could be pretty useful for food lovers, and for those who constantly searching for some new awesome recipes to light up their lives,  cook and share their food masterpices with family or friends 
 
-### Search for new recipe
+### Searching for new recipe
 
 ![Food Recipes App — Mozilla Firefox 2021-03-02 17-47-18](https://user-images.githubusercontent.com/61331410/109675186-3b8c1a80-7b80-11eb-87c2-20138a6d94a3.gif)
 
+### Adding and removing a favorite food recipe 
+![Food Recipes App — Mozilla Firefox 2021-03-02 17-59-22](https://user-images.githubusercontent.com/61331410/109676586-835f7180-7b81-11eb-9609-2f47aeaca424.gif)
+
+### Burger menu on mobile devices
+![Food Recipes App — Mozilla Firefox 2021-03-02 18-07-20](https://user-images.githubusercontent.com/61331410/109677629-860e9680-7b82-11eb-9da9-da7e0b20db66.gif)
 
 #### Main Features of test-task-weather-app:
 * Fully responsive app (Mobile First Approach).
