@@ -1,1 +1,4 @@
-/*    /index.html    200
+[[redirects]]
+from = "/static/*"
+to = "/static/:splat"
+status = 200
