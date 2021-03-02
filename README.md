@@ -25,7 +25,7 @@ Food Recipe is a React-based application that could be pretty useful for food lo
 
 #### React JS, Context API, Functional components, Styled-Components, Hooks, Router, React.lazy/suspense, Responsive Web Design, Mobile First Approach.
 
-A link on GitHub Pages - https://dmytro1991ua.github.io/react-task-tracker-app/
+A link on GitHub Pages - https://dmytro1991ua.github.io/react-food-recipe-app/
 
 # Getting Started with Create React App
 
