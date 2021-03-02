@@ -1,3 +1,22 @@
+# react-food-recipe-app 
+
+Food Recipe is a React-based application that could be pretty useful for food lovers, and for those who constantly searching for some new awesome recipes to light up their lives,  cook and share their food masterpices with family or friends 
+
+#### Main Features of test-task-weather-app:
+* Fully responsive app (Mobile First Approach).
+* Serach for favorite food recipes.
+* Check detailed recipe ingredients
+* Add a particular food recipe to your favorire list.
+* Remove a certain food recipe from a favorite list.
+* Add and Remove a favorite food recipe from a localStorage
+* Render food recipe data from a localStorage when a React app is loaded.
+
+##### Stack of technologies which were used to develop a particular project:
+
+#### React JS, Context API, Functional components, Styled-Components, Hooks, Router, React.lazy/suspense, Responsive Web Design, Mobile First Approach.
+
+A link on GitHub Pages - https://dmytro1991ua.github.io/react-task-tracker-app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
